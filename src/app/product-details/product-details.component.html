@@ -1,0 +1,48 @@
+
+
+<div class="section">
+  <div *ngIf="product" class="card">
+    <div class="image-section">
+      <img src="{{ product.imagePath }}">
+    </div>
+    <div class="description">
+      <h1>{{ product.name }}</h1>
+      <p><b>Price</b><span>{{ product.price | currency }}</span></p>
+      <p><b>Company</b><span>{{ product.company }}</span></p>
+      <p><b>Quantity</b><span>{{ product.quantity }}</span></p>
+      <p><b>Rating</b><span class="rating">{{ product.rating }}</span></p>
+      <p><b>Description</b></p>
+      <p>{{ product.description }}</p>
+      <p><a href="{{product.source}}">Source</a></p>
+    
+      <div class="button-group">
+        <a (click)="addToCart(product)" class="cart">Add to Cart</a>
+        <div class="divider"></div>
+        <share-buttons
+        [theme]="$1"
+        [include]="['telegram','whatsapp']"
+        [show]="1"
+        [size]="1"
+        [url]="'{product.source}'"
+        [autoSetMeta]="false"
+        ></share-buttons>
+      </div>
+    </div>
+  
+    <!-- <div class="info">
+  
+      <div class="rating">
+        <p><span>Rating:</span> {{ product.rating }}</p>
+      </div>
+  
+      <p class="bold">Description:</p>
+      <p>{{ product.description }}</p>
+      <p><a href="{{product.source}}">Source</a></p>
+    </div> -->
+    <!-- <div class="divider"></div> -->
+    <!-- <button (click)="addToCart(product)">Add to Cart</button> -->
+  
+  </div>
+</div>
+
+

@@ -1,0 +1,116 @@
+/* img {
+  width: 150px;
+  padding: 5px;
+}
+p {
+  font-size: 13px;
+}
+div {
+  width: 160px;
+  height: 460px;
+  display: inline-table;
+  padding: 10px;
+  border-bottom: 1px solid silver;
+} */
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  text-align: center;
+  padding: 20px 0px;
+  text-transform: uppercase;
+}
+.section {
+  width: 100%;
+  min-height: 100hv;
+  background-color: #eee;
+  /* display:inline-table; */
+}
+.cards{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 25%);
+  width: 325px;
+  height: 425px;
+  text-align: center;
+  margin: 25px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-section img {
+  width: auto;
+  height: 170px;
+}
+.image-top{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-top img {
+  width: 100%;
+  height: 243px;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+.description {
+  text-align: center;
+  margin-top: 20px;
+}
+.description h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+.description p {
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+}
+.description span{
+  margin-left: 8px;
+}
+.button-group {
+  margin-top: 30px;
+}
+.button-group .cart {
+  background-color: #1976d2;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.button-group .cart:hover {
+  background-color: #0b348d;
+  transition: 0.6s ease;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

@@ -1,0 +1,48 @@
+<div class="image-top">
+  <img src="https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3740_.jpg">
+</div>
+<h2>Products</h2>
+<!-- <div *ngFor="let product of products">
+  <h3>
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+    >
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <img src="{{ product.imagePath }}">
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
+</div> -->
+<div class="section">
+  <div class="cards">
+    <div *ngFor="let product of products" class="card">
+      <div class="image-section">
+        <img src="{{ product.imagePath }}">
+      </div>
+      <div class="description">
+        <h1><a
+          [title]="product.name + ' details'"
+          [routerLink]="['/products', product.id]">
+          {{ product.name }}
+        </a></h1>
+        <p><b>Price</b><span>{{ product.price | currency }}</span></p>
+      </div>
+      <div class="button-group">
+        <a (click)="addToCart(product)" class="cart">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

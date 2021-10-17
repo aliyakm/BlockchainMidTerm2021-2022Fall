@@ -1,0 +1,45 @@
+<div class="section">
+  <h3>Cart</h3>
+
+  <p>
+    <a routerLink="/shipping">Shipping Prices</a>
+  </p>
+
+  <div class="cart-item" *ngFor="let item of items">
+    <span>{{ item.name }}</span>
+    <form action="/action_page.php">
+      <label for="quantity">Quantity </label>
+      <input type="number" id="quantity" name="quantity" min="1" max="1000" />
+    </form>
+    <span>{{ item.price | currency }}</span>
+  </div>
+
+  <div>Total price: {{grandTotal}}</div>
+
+  <form action="/action_page.php">
+    <label for="Departure">Departure Date:</label>
+    <input type="date" id="Departure" name="Departure" />
+  </form>
+
+  <form action="/action_page.php">
+    <label for="Deliver">Deliver Date:</label>
+    <input type="date" id="Deliver" name="Deliver" />
+  </form>
+
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name"> Name </label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+
+    <div>
+      <label for="address"> Address </label>
+      <input id="address" type="text" formControlName="address" />
+    </div>
+
+    <a routerLink="/my-orders" class="button fancy-button">
+      <button class="button" type="submit">Purchase</button>
+    </a>
+  </form>
+
+</div>
