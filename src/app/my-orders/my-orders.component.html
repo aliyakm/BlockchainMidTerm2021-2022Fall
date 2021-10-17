@@ -1,0 +1,32 @@
+<div class="table-style">
+
+<table>
+  <tr>
+  <th>
+  Order id:
+  </th>
+  <th>
+  Total sum:
+  </th>
+  <th>
+  Date: 
+  </th>
+  <th>
+  Weight:
+  </th>
+  <th>
+  Status:
+  </th>
+  </tr>
+    <tr *ngFor="let order of orders" >
+      <td> {{order.order_id}} </td>
+      <td>{{order.sum}} </td>
+      <td>{{order.order_date}} </td>
+      <td>{{order.weight}}</td>
+      <td>{{order.order_status}} </td>
+    </tr>
+  
+
+</table>
+
+</div>
